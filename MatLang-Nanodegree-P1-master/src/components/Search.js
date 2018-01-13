@@ -21,8 +21,7 @@ export default class SearchBook extends Component {
       if (searchResults.error) {
         searchResults = [];
       }
-      // if book already is in bookshelf, set shelf value to the already
-      // existing value, not the one recieved from the database
+     
       searchResults = searchResults.map(book => {
         const bookInShelf = this.props.books.find(b => b.id === book.id);
         if (bookInShelf) {
